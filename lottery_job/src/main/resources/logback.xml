@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<property name="logDir" value="../logs" /> 
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logDir}/lottery.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logDir}/lottery.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+<!-- 	<logger name="org.hibernate" level="WARN" /> -->
+<!-- 	<logger name="org.apache" level="WARN" /> -->
+	
+<!-- 	<logger name="org.hibernate.type.descriptor.sql.BasicBinder"  level="WARN" />   -->
+<!--     <logger name="org.hibernate.type.descriptor.sql.BasicExtractor"  level="WARN" />   -->
+<!--     <logger name="org.hibernate.SQL" level="WARN" />   -->
+<!--     <logger name="org.hibernate.engine.QueryParameters" level="WARN" />   -->
+<!--     <logger name="org.hibernate.engine.query.HQLQueryPlan" level="WARN" /> -->
+	
+	<!-- project default level -->
+	<logger name="com" level="ERROR" />
+
+	<!--log4jdbc -->
+	<!-- <logger name="jdbc.sqltiming" level="INFO"/> -->
+
+	<root level="ERROR">
+		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+	</root>
+</configuration>
