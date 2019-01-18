@@ -1,0 +1,34 @@
+/*投注页面玩法介绍*/
+.lottery_win_desc {
+
+}
+.lottery_win_desc .title {
+	padding: 10px 10px 5px 10px;
+	border-bottom: 3px solid #CCCCCC;
+}
+
+.lottery_win_desc table tr td {
+	padding: 5px;
+	border-right: 1px solid #E4E4E4;
+	border-bottom: 1px solid #E4E4E4;
+}
+.lottery_win_desc table thead {
+	background: #F4F4F4;
+	text-align: center;
+}
+.lottery_win_desc table tbody tr td {
+	color: #424242;
+}
+/*投注页面玩法介绍 end*/
+#hotMissDiv{
+	padding:10px 0px;
+	background:#FAFAFA;
+	text-align: center;
+}
+#hotMissDiv label {
+	cursor: pointer;
+}
+#hotMissDiv input{
+	cursor: pointer;
+	margin-right:2px;
+}

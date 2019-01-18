@@ -1,0 +1,194 @@
+._issue {
+	background: white;
+}
+._lotNum {
+	background: #FEFAEB;
+	color: red;
+}
+._open_num {
+	background: url(../images/ball.gif) no-repeat center;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._open_num2 {
+	background: url(../images/ball2.gif) no-repeat center;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._open_num3 {
+	background: url(../images/ball3.gif) no-repeat center;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._open_num4 {
+	background: url(../images/ball18px.png) no-repeat 0 -107px;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._open_num5 {
+	background: url(../images/ball18px.png) no-repeat 0 -195px;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._num1_group {
+	background-color: #FFFFFF;
+}
+._num2_group {
+	background-color: #E0FFFF;
+}
+._num3_group {
+	background-color: #FFFFFF;
+}
+._num4_group {
+	background-color: #E0FFFF;
+}
+._num5_group {
+	background-color: #FFFFFF;
+}
+._zxst {
+	background-color: #FFFFFF;
+}
+._dx {
+	background-color: #E0FFFF;
+}
+._ds {
+	background-color: #FFFFFF;
+	font-size: 10px;
+}
+._dz {
+	background-color: #FFFFFF;
+}
+._zh {
+	background-color: #E0FFFF;
+	font-size: 10px;
+}
+._zxst_num {
+	background: url(../images/ball4.gif) no-repeat center;
+	background-color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._dz_num {
+	background: url(../images/ball4.gif) no-repeat center;
+	background-color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+}
+._allnum_group {
+	background-color: #E0FFFF;
+}
+._sum {
+	background-color: #F5DEB3;
+}
+._betwen {
+	background-color: #FFBD9D;
+}
+._dsb {
+	background-color: #C1FFC1;
+}
+._dxb {
+	background-color: #F0FFFF;
+}
+._kd {
+	background-color: #FAF0E6;
+}
+._dxpw {
+	background-color: #FFFFFF;
+}
+._opendx {
+	background-color: #FFE153;
+}
+
+.k1090 {
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.k1300 {
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+._noTrendDiv {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+}
+._noTrendDiv thead {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+._noTrendDiv thead td {
+	background-color: #BDB7B7;
+	padding: 5px 0px;
+	border-right: 1px solid #FFFFFF;
+}
+
+._lotInfo {
+	font-size: 20px;
+}
+._noTrendTr td {
+	background: #FFFFFF;
+}
+._noTr td {
+	background-color: #8D8D8D !important;
+	color: #fff;
+	padding: 0px !important;
+}
+div._noline1 {
+	position: absolute;
+	z-index: 2;
+	width: 1px;
+	height: 1px;
+	background-color: blue;
+	overflow: hidden;
+}
+._whiteWord {
+	color: #898484;
+}
+
+.mainTrend {
+	border: 1px solid #ECECEC;
+	background: #FFFFFF;
+	position: relative;
+}
+
+.zhuiQiUl li.current {
+	background: url(../images/indexIco.png) no-repeat right -88px;
+	border: 2px #ff8500 solid;
+	line-height: 24px;
+}
+.zhuiQiUl li {
+	border: 1px #ccc solid;
+	color: #dd530f;
+	float: left;
+	margin-right: 14px;
+	line-height: 26px;
+	padding: 0 7px;
+	cursor: pointer;
+}
+._count_info {
+	background-color: white;
+}
+._analog {
+	background: #CD4F39;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	cursor: pointer;
+	color: #ffffff;
+}
+._current {
+	background: #fff094 url(../images/ball.gif) no-repeat center;
+	color: #ffffff;
+	font-family: Arial;
+	font-weight: bold;
+	cursor: pointer;
+}

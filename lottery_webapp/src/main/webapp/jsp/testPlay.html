@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" 
+href="testPlay.css">
+<script type="text/javascript">
+$(document).ready(function () {
+    (new CenterImgPlay()).Start();
+});
+function CenterImgPlay() {
+    this.list = $(".imgbox").children(":first").children();
+    this.indexs = [];
+    this.length = this.list.length;
+    //图片显示时间
+    this.timer = 3000;
+    this.showTitle = $(".title");
+
+    var index = 0, self = this, pre = 0, handid, isPlay = false, isPagerClick = false;
+
+    this.Start = function () {
+        this.Init();
+        //计时器，用于定时轮播图片
+        handid = setInterval(self.Play, this.timer);
+    };
+    //初始化
+    this.Init = function () {
+        var o = $(".pager ul li"), _i;
+
+        for (var i = o.length - 1, n = 0; i >= 0; i--, n++) {
+            this.indexs[n] = o.eq(i).click(self.PagerClick);
+        }
+    };
+    this.Play = function () {
+        isPlay = true;
+        index++;
+        if (index == self.length) {
+            index = 0;
+        }
+        //先淡出，在回调函数中执行下一张淡入
+        self.list.eq(pre).fadeOut(300, "linear", function () {
+            var info = self.list.eq(index).fadeIn(500, "linear", function () {
+                isPlay = false;
+                if (isPagerClick) { handid = setInterval(self.Play, self.timer); isPagerClick = false; }
+            }).attr("title");
+            //显示标题
+            self.showTitle.text(info);
+            //图片序号背景更换
+            self.indexs[index].css("background-color", "#FF70Ad");
+            self.indexs[pre].css("background-color", "#6f4f67");
+
+            pre = index;
+        });
+    };
+    //图片序号点击
+    this.PagerClick = function () {
+        if (isPlay) { return; }
+        isPagerClick = true;
+
+        clearInterval(handid);
+
+        var oPager = $(this), i = parseInt(oPager.text()) - 1;
+
+        if (i != pre) {
+            index = i - 1;
+            self.Play();
+        }
+    };
+};
+</script>
+</head>
+<body>
+<div class="imgbox">
+        <!--图片列表，除第一张显示外，其余隐藏-->
+        <ul>
+            <li style="display: block;" title="清灵少女宛如梦境仙女"><a href="#">
+                <img src="http://p.dddddd.net/uploads/allimg/110927/11-11092G32227.jpg" /></a></li>
+            <li title="美女海边性感透视装诱惑"><a href="#">
+                <img src="http://tu.dushiys.com/uploads/allimg/130621/1-130621145931-50.jpg" /></a></li>
+            <li title="夏小薇：百变小魔女变身性感数码宝贝"><a href="#">
+                <img src="http://p.dddddd.net/uploads/allimg/130620/19-130620115013.jpg" /></a></li>
+            <li title="夏小薇化身《杀破狼》粉色妖姬鲜嫩欲滴"><a href="#">
+                <img src="http://imgtu.5239.com/uploads/allimg/130315/5-130315135240.jpg" /></a></li>
+        </ul>
+        <div class="title_bg common"><!--图片标题背景-->
+        </div>
+        <!--图片显示标题-->
+        <div class="title common"></div>
+        <!--图片序号-->
+        <div class="pager common">
+            <ul>
+                <li>4</li>
+                <li>3</li>
+                <li>2</li>
+                <li style="background: #FF70Ad;">1</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
