@@ -1,0 +1,65 @@
+#chat_user_list {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#chat_user_list #chat_user_list_content {
+	height: 300px;
+	overflow-y: scroll;
+}
+#chat_user_list #chat_user_list_title {
+	text-align: center;
+	background: #CCCCCC;
+	color: #000;
+	padding: 10px 0px;
+}
+#chat_user_list .list-group .list-group-item {
+	border: 0px;
+}
+#chat_panel {
+	height: 200px;
+	color: #009900;
+	overflow-y: scroll;
+}
+.chat-items {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.chat-items p {
+	margin-bottom: 0px;
+	color: #CCC;
+}
+.self {
+	color: #AA5500;
+}
+#chat_input {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#chat_input #tools {
+	background: #ccc;
+	position: relative;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ECECEC;
+}
+#chat_input #tools a {
+	color: #000000;
+}
+#chat_input #tools #sayList {
+	display: block;
+	top: -310px;
+	left: -90px;
+	width: 500px;
+}
+#chat_input #tools #sayList #sayListContent {
+	height: 300px;
+	overflow-y: scroll;
+}
+#chat_input #tools #sayList #sayListContent ul li {
+	cursor: pointer;
+}
+#chat_input #tools #sayList #sayListContent ul li:hover {
+	color: #009900;
+}
+#chat_input #content {
+	padding: 10px 0px;
+}
